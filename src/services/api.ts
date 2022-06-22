@@ -6,17 +6,17 @@ import { HttpClient } from 'aurelia-fetch-client';
 export class ApiWrapper {
   private readonly baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
 
-    constructor(public client: HttpClient) {
-		client.configure(config => {
-			config
-				.withBaseUrl(this.baseUrl)
-				.withDefaults({
-					headers: {
-						Accept: 'application/json',
-					},
-				});
-		});
-	}
+  constructor(public client: HttpClient) {
+    client.configure(config => {
+      config
+        .withBaseUrl(this.baseUrl)
+        .withDefaults({
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+    });
+  }
 
   public async getOne(): Promise<string> {
     return this.client.fetch("/quotes/")
