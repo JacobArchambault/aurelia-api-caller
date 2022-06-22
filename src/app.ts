@@ -1,18 +1,13 @@
-import { autoinject } from 'aurelia-framework';
-import { QuoteService } from './services/quote-service';
-
-@autoinject
+import {RouterConfiguration, Router} from 'aurelia-router';
+import { PLATFORM } from "aurelia-framework";
+  
 export class App {
-  private values: string[] = [];
-
-  constructor(private quoteService: QuoteService) {
-  }
-
-  private async addOne(): Promise<void> {
-    try {
-      this.values.push(await this.quoteService.getOne());
-    } catch (ex) {
-      console.error(ex);
-    }
+  configureRouter(config: RouterConfiguration, router: Router): void {
+    config.title = 'Routing demo';
+    config.options.pushState = true;
+    config.map([
+      { route: '/',   moduleId: PLATFORM.moduleName('elements/ron-swanson-quotes/ron-swanson-quotes'), title: 'Home' },
+      { route: 'ron-swanson-quotes',   moduleId: PLATFORM.moduleName('elements/ron-swanson-quotes/ron-swanson-quotes'), title: 'Ron Swanson quotes' }
+    ]);
   }
 }
