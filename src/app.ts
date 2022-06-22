@@ -1,5 +1,5 @@
 import { autoinject } from 'aurelia-framework';
-import { QuoteService } from './services/api';
+import { QuoteService } from './services/quote-service';
 
 @autoinject
 export class App {
