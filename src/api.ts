@@ -5,7 +5,6 @@ const baseUrl = "http://ron-swanson-quotes.herokuapp.com/v2";
 
 @autoinject
 export class ApiWrapper {
-    public message = 'Hello World!';
     public values: string[];
 
     constructor(public client: HttpClient) {

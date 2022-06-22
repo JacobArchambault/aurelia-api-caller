@@ -3,7 +3,6 @@ import { ApiWrapper } from './api';
 
 @autoinject
 export class App {
-  public message = 'Hello World!';
   public values: string[];
 
   constructor(public api: ApiWrapper) {
@@ -12,7 +11,7 @@ export class App {
 
   private async initValues() {
     try {
-      this.values = await this.api.client.fetch("/quotes/3")
+      this.values = await this.api.client.fetch("/quotes/")
         .then((res) => res.json());
     } catch (ex) {
       console.error(ex);
