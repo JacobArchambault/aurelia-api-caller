@@ -18,4 +18,8 @@ export class ApiWrapper {
 		});
 	}
 
+  public async getOne(): Promise<string> {
+    return this.client.fetch("/quotes/")
+      .then((res) => res.json());
+  }
 }

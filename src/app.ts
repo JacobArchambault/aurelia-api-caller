@@ -16,8 +16,8 @@ export class App {
     }
   }
 
-  private async getOne(): Promise<string> {
-    return this.api.client.fetch("/quotes/")
-      .then((res) => res.json());
+  private async getOne() : Promise<string> {
+    return this.api.getOne();
   }
+
 }
