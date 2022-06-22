@@ -3,7 +3,7 @@ import { HttpClient } from 'aurelia-fetch-client';
 
 
 @autoinject
-export class ApiWrapper {
+export class QuoteService {
   private readonly baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
 
   constructor(private client: HttpClient) {
