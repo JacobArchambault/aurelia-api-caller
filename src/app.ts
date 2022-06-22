@@ -8,7 +8,7 @@ export class App {
   constructor(public api: ApiWrapper) {
   }
 
-  private async initValues() {
+  private async addOne(): Promise<void> {
     try {
       this.values.push(await this.getQuotes());
     } catch (ex) {
