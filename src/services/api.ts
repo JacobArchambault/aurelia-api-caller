@@ -6,7 +6,7 @@ import { HttpClient } from 'aurelia-fetch-client';
 export class ApiWrapper {
   private readonly baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
 
-  constructor(public client: HttpClient) {
+  constructor(private client: HttpClient) {
     client.configure(config => {
       config
         .withBaseUrl(this.baseUrl)
