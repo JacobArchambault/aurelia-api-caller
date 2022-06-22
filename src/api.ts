@@ -1,16 +1,16 @@
 import { autoinject } from 'aurelia-framework';
 import { HttpClient } from 'aurelia-fetch-client';
 
-const baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
 
 @autoinject
 export class ApiWrapper {
-    public values: string[];
+  private readonly baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
+  public values: string[];
 
     constructor(public client: HttpClient) {
 		client.configure(config => {
 			config
-				.withBaseUrl(baseUrl)
+				.withBaseUrl(this.baseUrl)
 				.withDefaults({
 					headers: {
 						Accept: 'application/json',
