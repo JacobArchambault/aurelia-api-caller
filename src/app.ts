@@ -10,13 +10,13 @@ export class App {
 
   private async addOne(): Promise<void> {
     try {
-      this.values.push(await this.getQuotes());
+      this.values.push(await this.getOne());
     } catch (ex) {
       console.error(ex);
     }
   }
 
-  private async getQuotes(): Promise<string> {
+  private async getOne(): Promise<string> {
     return this.api.client.fetch("/quotes/")
       .then((res) => res.json());
   }
