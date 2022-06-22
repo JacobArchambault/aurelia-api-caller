@@ -10,10 +10,14 @@ export class App {
 
   private async initValues() {
     try {
-      this.values.push(await this.api.client.fetch("/quotes/")
-        .then((res) => res.json()));
+      this.values.push(await this.getQuotes());
     } catch (ex) {
       console.error(ex);
     }
+  }
+
+  private async getQuotes() {
+    return this.api.client.fetch("/quotes/")
+      .then((res) => res.json());
   }
 }
