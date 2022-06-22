@@ -1,5 +1,5 @@
 import { autoinject } from 'aurelia-framework';
-import { ApiWrapper } from './api';
+import { ApiWrapper } from './services/api';
 
 @autoinject
 export class App {
