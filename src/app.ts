@@ -3,9 +3,9 @@ import { ApiWrapper } from './services/api';
 
 @autoinject
 export class App {
-  public values: string[] = [];
+  private values: string[] = [];
 
-  constructor(public api: ApiWrapper) {
+  constructor(private api: ApiWrapper) {
   }
 
   private async addOne(): Promise<void> {
