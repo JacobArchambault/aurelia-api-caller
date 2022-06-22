@@ -10,14 +10,9 @@ export class App {
 
   private async addOne(): Promise<void> {
     try {
-      this.values.push(await this.getOne());
+      this.values.push(await this.api.getOne());
     } catch (ex) {
       console.error(ex);
     }
   }
-
-  private async getOne() : Promise<string> {
-    return this.api.getOne();
-  }
-
 }
