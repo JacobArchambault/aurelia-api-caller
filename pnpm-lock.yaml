@@ -10,6 +10,7 @@ specifiers:
   aurelia-animator-css: ^1.0.4
   aurelia-bootstrapper: ^2.4.0
   aurelia-cli: ^3.0.0
+  aurelia-fetch-client: ^1.8.2
   aurelia-loader-nodejs: ^1.1.0
   aurelia-pal-nodejs: ^2.0.0
   aurelia-testing: ^1.1.0
@@ -45,6 +46,7 @@ specifiers:
 dependencies:
   aurelia-animator-css: 1.0.4
   aurelia-bootstrapper: 2.4.0
+  aurelia-fetch-client: 1.8.2
 
 devDependencies:
   '@types/jest': 27.5.2
@@ -1911,6 +1913,12 @@ packages:
     resolution: {integrity: sha512-8fSWNCgh3gIsq/MgE+njVnUlYS05D6acyC8aJECekNWYecdBz46ckEblywP1ZNHLIt3u/Ws0oMqiOp1Jjw+0hw==}
     dependencies:
       aurelia-logging: 1.5.2
+    dev: false
+
+  /aurelia-fetch-client/1.8.2:
+    resolution: {integrity: sha512-HEQAi4CTEByesIBDqfn/YAF7ZwVQCn28npT2HknAr03orYr57klwY6y+oT3Kc1mEVe+9PU5gk2tzJiaqPXK5hw==}
+    dependencies:
+      aurelia-pal: 1.8.2
     dev: false
 
   /aurelia-framework/1.4.1:
