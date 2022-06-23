@@ -1,10 +1,10 @@
 import { autoinject } from 'aurelia-framework';
 import { HttpClient } from 'aurelia-fetch-client';
-
+import { Url } from 'url';
 
 @autoinject
-export class QuoteService {
-  private readonly baseUrl = "https://ron-swanson-quotes.herokuapp.com/v2";
+export class PostsService {
+  private readonly baseUrl: string = "https://jsonplaceholder.typicode.com"
 
   constructor(private client: HttpClient) {
     client.configure(config => {
@@ -18,8 +18,8 @@ export class QuoteService {
     });
   }
 
-  public async getOne(): Promise<string> {
-    return await this.client.fetch("/quotes/")
+  public async getAll(): Promise<string[]> {
+    return await this.client.fetch("/posts/")
       .then((res) => res.json());
   }
 }
