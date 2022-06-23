@@ -19,7 +19,7 @@ export class QuoteService {
   }
 
   public async getOne(): Promise<string> {
-    return await this.client.fetch("/quotes/")
+    return this.client.fetch("/quotes/")
       .then((res) => res.json());
   }
 }
