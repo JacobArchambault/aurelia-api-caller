@@ -3,14 +3,14 @@ import { QuoteService } from 'services/quote-service';
 
 @autoinject
 export class RonSwansonQuotes {
-  private values: string;
+  private quote: string;
 
   constructor(private quoteService: QuoteService) {
   }
 
   private async addOne(): Promise<void> {
     try {
-      this.values = await this.quoteService.getOne();
+      this.quote = await this.quoteService.getOne();
     } catch (ex) {
       console.error(ex);
     }
