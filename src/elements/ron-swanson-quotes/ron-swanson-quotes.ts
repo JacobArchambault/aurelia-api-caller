@@ -8,7 +8,7 @@ export class RonSwansonQuotes {
   constructor(private quoteService: QuoteService) {
   }
 
-  private async addOne(): Promise<void> {
+  private async getQuote(): Promise<void> {
     try {
       this.quote = await this.quoteService.getOne();
     } catch (ex) {
