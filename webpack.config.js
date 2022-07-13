@@ -189,7 +189,8 @@ module.exports = ({ production }, { analyze, hmr, port, host }) => ({
     open: project.platform.open,
     hot: hmr || project.platform.hmr,
     port: port || project.platform.port,
-    host: host
+    host: host, 
+    https: true
   },
   devtool: production ? undefined : 'cheap-module-source-map',
   module: {
